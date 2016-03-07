@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-    <!-- 注册表单 -->
-{% block main %}
-    <div class="main-content col-md-6 col-md-offset-2">
-        {{ wtf.quick_form(form) }}
-        <br>
-        <p>忘记密码？<a href="{{ url_for('auth.password_reset_request') }}">点击重置</a>.</p>
-        <p>新用户？<a href="{{ url_for('auth.register') }}">进行注册</a></p>
-    </div>
+
+{% block title %}Flasky - Login{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Login</h1>
+</div>
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p>Forgot your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>.</p>
+    <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
+</div>
 {% endblock %}

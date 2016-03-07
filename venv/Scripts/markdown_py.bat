@@ -1,0 +1,1 @@
+@"e:\chenxiweb\chenxiweb\flasky\venv\scripts\python.exe" "e:\chenxiweb\chenxiweb\flasky\venv\Scripts\markdown_py" %*
