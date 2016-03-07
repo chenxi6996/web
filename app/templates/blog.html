@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block main %}
+<h1>{{ user.username }}</h1>
+<img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}"> 
+{% if user.name or user.location %}
+<p>
+	{% if user.name %}{{ user.name }}{% endif %}
+	<br>
+	{% if user.location %}{{ user.location }}{% endif %}
+</p>
+{% endif %}
+<h3>Posts by {{ user.username }}</h3>
+{% include '_posts.html' %}
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.blog', username=user.username) }}
+</div>
+{% endif %}
+{% endblock %}

@@ -1,3 +1,6 @@
+#encoding=utf-8
+#检查用户权限的自定义修饰器
+
 from functools import wraps
 from flask import abort
 from flask.ext.login import current_user
