@@ -2,10 +2,12 @@
 {% import "bootstrap/wtf.html" as wtf %}
     <!-- 注册表单 -->
 {% block main %}
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('main.index') }}">首页</a></li>
+        <li><a href="{{ url_for('main.category') }}">分类管理</a></li>
+    </ol>
+
     <div class="main-content col-md-6 col-md-offset-2">
         {{ wtf.quick_form(form) }}
-        <br>
-        <p>忘记密码？<a href="{{ url_for('auth.password_reset_request') }}">点击重置</a>.</p>
-        <p>新用户？<a href="{{ url_for('auth.register') }}">进行注册</a></p>
     </div>
 {% endblock %}

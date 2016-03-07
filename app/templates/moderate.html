@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% import "_macros.html" as macros %}
 
-{% block title %}Flasky - Comment Moderation{% endblock %}
-
-{% block page_content %}
-<div class="page-header">
-    <h1>Comment Moderation</h1>
-</div>
+{% block main %}
+<ol class="breadcrumb">
+	<li><a href="{{ url_for('main.index') }}">首页</a></li>
+	<li><a href="{{ url_for('main.moderate') }}">管理评论</a></li>
+</ol>
 {% set moderate = True %}
 {% include '_comments.html' %}
 {% if pagination %}
