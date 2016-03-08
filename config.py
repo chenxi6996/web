@@ -25,7 +25,7 @@ class Config:
         pass
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgres://rijurmvsddkkxj:a7hmja0hWmWoZ0HuelTa2ZgaaE@ec2-23-23-199-181.compute-1.amazonaws.com:5432/d56eq9u07c58i9'
+    SQLALCHEMY_DATABASE_URI ='postgres://nwobiqjlcpwbts:Zta8qgTSd-pr31vbSlEdtmAJyy@ec2-54-204-25-54.compute-1.amazonaws.com:5432/df8mqrhrophqgp'
 
     @classmethod
     def init_app(cls,app):

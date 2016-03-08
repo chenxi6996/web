@@ -24,7 +24,7 @@
             <nav class="blog-nav">
                 <div class="col-md-11">
                 <a class="blog-nav-item active" href="{{ url_for('main.index') }}">Home</a>
-                <a class="blog-nav-item" href="#">Category</a>
+                <a class="blog-nav-item" href="{{ url_for('main.blog',username=current_user.username) }}">Category</a>
                 <a class="blog-nav-item" href="#">Comment</a>
                 {% if current_user.can(Permission.MODERATE_COMMENTS) %}
                 <a class="blog-nav-item" href="{{ url_for('main.moderate') }}">Comment Moderation</a>
